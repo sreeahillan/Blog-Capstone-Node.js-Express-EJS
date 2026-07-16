@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="../public/style.css">
 </head>
 <body>
-    
+    <h1>Posts</h1>
+    <a href="/new">Create your first blog</a>
+
+    <% if(locals.title) { %>
+        <h2><%= title %></h2>
+        <p><%= content %></p>
+        <a href="/edit">edit</a>
+        <a href="/del">delete</a>
+    <% } else { %>
+        <h1>its not there</h1>
+    <% } %>
 </body>
 </html>
