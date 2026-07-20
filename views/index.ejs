@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog-home</title>
-    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Posts</h1>
+    <%- include("partials/header.ejs") %>
+    <div class="container">
+        <div class="intimation1">
+        <h1 class="post">Posts</h1>
+        <%  if(locals.title.length === 0) { %>
+            <p class="intimation">No Posts yet, <a class="create" href="/new">Click here to Create your first one !</a></p>
+            </div>
+        <% } else if(locals.title) { %>
+            
+            <% for(let i = 0; i<title.length ; i++) { %>
+                <div class="blogs">
+                <div class="mains">
+                <h1 class="top"><%= title[i].title %></h1>
+                <p><%= title[i].content %></p>
+                </div>
+                <div class="btns">
+                <a href=<%= "/edit/" + i  %>>Edit</a>
+                <a class="del" href=<%= "/del/" + i %>>Delete</a>
+                </div>
+                </div>
+        <% } } %>
+            
+    </div>
     
-
-    <% if(locals.title) { %>
-        <% for(let i = 0; i<title.length ; i++) { %>
-            <h1><%= title[i].title %></h1>
-            <p><%= title[i].content %></p>
-            <a href="<%= /edit/ + i %>">Edit</a>
-            <a href="/del" + <% i %>>Delete</a>
-    <% } %>
-    <% } else { %>
-        <a href="/new">Create your first blog</a>
-        <% } %>
 </body>
 </html>

@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffd303;
+}
+.container {
+  /* padding-left: 302px; */
+  min-height: 100vh;
+}
+
+/* -------------------header---------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  margin: 15px;
+  border-radius: 30px;
+  background-color: #353221;
+}
+.navbar > h2 {
+  color: #f0f0f0;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 1.5 rem;
+}
+.navbar > a {
+  color: #f0f0f0;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* -------------------newpost----------------------------------- */
+
+.container3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newpost {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #111111;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.title,
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+.title label {
+  margin-right: auto;
+}
+.content label {
+  margin-right: auto;
+}
+
+.newpost input,
+.newpost textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 800px;
+}
+.newpost textarea {
+  height: 150px;
+  resize: none;
+}
+
+input,
+textarea:focus {
+  outline: none;
+}
+
+.newpost > button {
+  border: #ffd303 1px solid;
+  padding: 10px 35px;
+  width: fit-content;
+  border-radius: 30px;
+  color: white;
+  background-color: #111111;
+  font-family: "Syne", "sans-serif";
+  font-weight: 800;
+  font-size: 1rem;
+  transition-duration: 0.3s;
+  margin-left: auto;
+}
+
+.newpost > button:hover {
+  background-color: #ffd303;
+  color: #111111;
+  border: #111111 1px solid;
+  cursor: pointer;
+}
+
+/* ---------------------index------------------------------------ */
+
+.post {
+  font-family: "Syne", "sans-serif";
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+.intimation1{
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+}
+.create {
+  text-decoration: none;
+  border-radius: 30px;
+  color: #11111199;
+  text-decoration: underline;
+  font-family: "Inter", sans-serif;
+}
+.intimation {
+  font-family: "Inter", sans-serif;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogs {
+  border: #6b6a6a66 1px solid;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 13px;
+  padding: 18.9px 18.9px;
+  border-radius: 10px;
+}
+
+.mains {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mains > h1 {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.mains > p {
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.btns {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.btns > a {
+  text-decoration: none;
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  color: #11111199;
+  transition-duration: 0.3s;
+}
+.btns > a:first-child {
+  color: #ff5b3e;
+}
+.btns > a:first-child:hover {
+  color: #111111;
+}
+.del:hover {
+  color: #111111;
+}
+
+/* ---------------------edit------------------------------- */
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container2 input {
+  width: 100%;
+  max-width: 800px;
+  height: 40px;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.container2 textarea {
+  resize: none;
+  width: 100%;
+  max-width: 800px;
+  height: 200px;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.edit1,
+.edit2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+}
+.btn2 {
+  margin-left: auto;
+}
+.edit1 > h1 {
+  font-family: "Syne", "sans-serif";
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+.container2 label {
+  font-family: "Syne", "sans-serif";
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.container2 button {
+  border: #ffd303 1px solid;
+  padding: 10px 35px;
+  width: fit-content;
+  border-radius: 30px;
+  color: white;
+  background-color: #111111;
+  font-family: "Syne", "sans-serif";
+  font-weight: 800;
+  font-size: 1rem;
+  transition-duration: 0.3s;
+  margin-top: 13px;
+}
+.container2 button:hover {
+  border: 1px #111111 solid;
+  color: #111111;
+  background-color: #ffd303;
+  cursor: pointer;
+}
+
+/* --------------------media------------------------------- */
+/* ------------------------queries--------------------------------- */
+
+@media (max-width: 850px) {
+  
+}
+@media (max-width: 620px) {
+  
+  .navbar h2 {
+    font-size: 1.2rem;
+  }
+  .newpost > button {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+  }
+  
+}
+@media (max-width: 460px) {
+  .navbar {
+    padding: 20px 10px;
+  }
+  .post{
+    font-size: 1.5em;
+  }
+  .navbar > h2 {
+    font-size: 1rem;
+  }
+  .newpost label {
+    font-size: 1rem;
+  }
+  .navbar > a {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 420px) {
+  .edit2 button {
+    padding: 7px 25px;
+    font-size: 0.7rem;
+  }
+  .container2 label {
+    font-size: 1.2rem;
+  }
+  .container2 h1 {
+    font-size: 1.5em;
+  }
+  
+}
+@media (max-width: 355px) {
+  .navbar {
+    margin: 15px 5px;
+    padding: 12px 10px;
+  }
+  .post {
+    margin-top: 0px;
+  }
+  
+}

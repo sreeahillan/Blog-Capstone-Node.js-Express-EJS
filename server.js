@@ -4,6 +4,7 @@ import body from "body-parser";
 const app = express();
 const port = 3001;
 
+app.use(express.static("public"))
 app.set("viewengine", "ejs");
 
 app.use(body.urlencoded({ extended: true }));
@@ -11,7 +12,9 @@ app.use(body.urlencoded({ extended: true }));
 var array = [];
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs" , {
+    title : array
+  }); 
 });
 
 app.get("/new", (req, res) => {
@@ -46,12 +49,10 @@ app.get("/edit/:id", (req, res) => {
     content: id_holder.content,
   });
 });
-app.get("/del", (req, res) => {
-  showcontent = "";
-  showtitle = "";
-  res.render("index.ejs", {
-    title: showtitle,
-    content: showcontent,
+app.get("/del/:del", (req, res) => {
+  array = array.filter(user => user.id !== Number(req.params.del));
+  res.render("index.ejs" , {
+    title : array
   });
 });
 
